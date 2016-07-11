@@ -1,8 +1,4 @@
-require("babel-core/register")({
-  presets: [
-    "es2015"
-  ]
-});
+require("babel-core/register");
 
 exports.config = {
   specs: ['./test-files/**/*.e2e.js'],
