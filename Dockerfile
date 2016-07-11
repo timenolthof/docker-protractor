@@ -9,11 +9,12 @@ RUN cd /tmp && \
     cp -a /tmp/node_modules /opt/app/ && \
     rm -R /tmp/node_modules
 
-RUN npm run update-webdriver
 
 RUN mkdir -p /opt/app/test-files
 
 WORKDIR /opt/app
 ADD . /opt/app
+
+RUN npm run update-webdriver
 
 CMD npm start
