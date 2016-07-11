@@ -1,9 +1,3 @@
-require("babel-core/register")({
-  presets: [
-    "es2015"
-  ]
-});
-
 exports.config = {
   specs: ['./test-files/**/*.e2e.js'],
   seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.52.0.jar',
