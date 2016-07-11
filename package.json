@@ -4,6 +4,7 @@
     "start": "./protractor.sh"
   },
   "dependencies": {
+    "concurrently": "2.2.0",
     "protractor": "3.3.0"
   }
 }
