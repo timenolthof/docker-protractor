@@ -9,6 +9,8 @@ RUN cd /tmp && \
     cp -a /tmp/node_modules /opt/app/ && \
     rm -R /tmp/node_modules
 
+RUN webdriver-manager update
+
 RUN mkdir -p /opt/app/test-files
 
 WORKDIR /opt/app

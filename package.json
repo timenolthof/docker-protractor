@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "prestart": "webdriver-manager update",
     "start": "./protractor.sh"
   },
   "dependencies": {
