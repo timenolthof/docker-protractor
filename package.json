@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "prestart": "webdriver-manager update",
+    "start": "protractor ./protractor.conf.js"
+  },
+  "dependencies": {
+    "protractor": "3.3.0"
+  }
+}
