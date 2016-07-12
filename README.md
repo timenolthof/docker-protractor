@@ -20,6 +20,6 @@ Protractor image which will perform tests against the Chrome browser.
 
 4. Set the URL of your tests
 
+        network_mode: "host"
         environment:
-          - PROTRACTOR_BASE_URL=http://app:3003
-
+          - PROTRACTOR_BASE_URL=http://localhost:3003
