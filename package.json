@@ -4,9 +4,9 @@
     "start": "npm-run-all --parallel --race xvfb protractor",
     "postinstall": "npm run update-webdriver",
     "update-webdriver": "webdriver-manager update",
-    "wait-for-server": "wget --retry-connrefused --spider http://app:3001",
+    "wait-for-server": "wget --retry-connrefused --spider $PROTRACTOR_BASE_URL",
     "preprotractor": "npm run wait-for-server",
-    "protractor": "DISPLAY=:99 protractor ./protractor.conf.js --verbose",
+    "protractor": "DISPLAY=:99 protractor --verbose ./protractor.conf.js",
     "xvfb": "/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset"
   },
   "dependencies": {
