@@ -1,4 +1,4 @@
-require("babel-core/register");
+require('babel-core/register');
 
 exports.config = {
   specs: ['./test-files/**/*.e2e.js'],
