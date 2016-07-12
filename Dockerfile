@@ -1,20 +1,24 @@
 FROM tippiq/node-base:develop
 
+RUN \
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+  echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+RUN \
+  apt-get update && \
+  apt-get install --no-install-recommends -y \
+    google-chrome-stable \
+    xvfb \
+    && \
+  rm -rf /var/lib/apt/lists/*
+
 # use changes to package.json to force Docker not to use the cache
 # when we change our application's nodejs dependencies:
-ADD package.json /tmp/package.json
-RUN cd /tmp && \
-    npm install && \
-    mkdir -p /opt/app && \
-    cp -a /tmp/node_modules /opt/app/ && \
-    rm -R /tmp/node_modules
-
-
-RUN mkdir -p /opt/app/test-files
-
 WORKDIR /opt/app
-ADD . /opt/app
+COPY package.json .
+RUN npm install
 
-RUN npm run update-webdriver
+VOLUME /opt/app/test-files
+
+COPY . .
 
 CMD npm start

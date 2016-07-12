@@ -1,7 +1,7 @@
 require('babel-core/register');
 
 exports.config = {
-  specs: ['./test-files/**/*.e2e.js'],
+  specs: [process.env.PROTRACTOR_SPECS || './test-files/**/*.e2e.js'],
   seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.52.0.jar',
   directConnect: true,
   capabilities: {
