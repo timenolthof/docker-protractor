@@ -13,6 +13,7 @@
     "protractor": "3.3.0",
     "protractor-hotkeys": "0.0.5",
     "protractor-jasmine2-screenshot-reporter": "0.3.1",
+    "secure-random-string": "1.0.0",
     "tippiq-protractor-utils": "git+https://github.com/tippiq/protractor-utils.git#v0.0.2"
   }
 }
