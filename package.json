@@ -15,7 +15,6 @@
     "babel-core": "6.10.4",
     "babel-preset-es2015": "6.9.0",
     "babel-register": "6.9.0",
-    "dockerize": "0.1.0",
     "npm-run-all": "2.3.0",
     "protractor": "3.3.0",
     "protractor-hotkeys": "0.0.5",
