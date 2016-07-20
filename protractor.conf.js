@@ -11,9 +11,16 @@ exports.config = {
       args: ['--lang=nl', '--window-size=1024,768', '--no-sandbox']
     }
   },
+  jasmineNodeOpts: {
+    isVerbose: true,
+    print: function() {}
+  },
   baseUrl: process.env.PROTRACTOR_BASE_URL,
   framework: 'jasmine',
   onPrepare: function() {
     browser.ignoreSynchronization = true;
+    var SpecReporter = require('jasmine-spec-reporter');
+    // add jasmine spec reporter
+    jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
   }
 };

@@ -6,7 +6,7 @@
     "update-webdriver": "webdriver-manager update",
     "wait-for-server": "wget --retry-connrefused --spider $PROTRACTOR_BASE_URL",
     "preprotractor": "npm run wait-for-server",
-    "protractor": "DISPLAY=:99 protractor --verbose ./protractor.conf.js",
+    "protractor": "DISPLAY=:99 protractor ./protractor.conf.js --verbose",
     "xvfb": "/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "babel-core": "6.10.4",
     "babel-preset-es2015": "6.9.0",
     "babel-register": "6.9.0",
+    "jasmine-spec-reporter": "2.5.0",
     "npm-run-all": "2.3.0",
     "protractor": "3.3.0",
     "protractor-hotkeys": "0.0.5",
